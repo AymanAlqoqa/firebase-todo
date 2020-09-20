@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Todo app">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo App</title>
+    <link rel="stylesheet" href="./css/main.css">
+    <script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-firestore.js"></script>
+</head>
+
+<body>
+
+    <header class="container">
+        <h2>Todo App</h2>
+    </header>
+    <main class="container">
+        <form>
+            <input type="text" class="todo" name="todo" placeholder="add todo">
+            <button type="submit">+</button>
+        </form>
+        <ul class="list">
+            <!-- <li>
+                <span class="list-todo">this is the first</span>
+                <span class="list-del"><img src="./images/trash-icon.png" alt="delete"></span>
+            </li>
+            <li>
+                <span class="list-todo">this is the first</span>
+                <span class="list-del"><img src="./images/trash-icon.png" alt="delete"></span>
+            </li>
+            <li>
+                <span class="list-todo">this is the first</span>
+                <span class="list-del"><img src="./images/trash-icon.png" alt="delete"></span>
+            </li>
+            <li>
+                <span class="list-todo">this is the first</span>
+                <span class="list-del"><img src="./images/trash-icon.png" alt="delete"></span>
+            </li> -->
+        </ul>
+    </main>
+
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyC8H159BSWy9Kse3bKPIV2zUZG9Tw-9-E0",
+            authDomain: "todo-app-1d771.firebaseapp.com",
+            databaseURL: "https://todo-app-1d771.firebaseio.com",
+            projectId: "todo-app-1d771",
+            storageBucket: "todo-app-1d771.appspot.com",
+            messagingSenderId: "620902866005",
+            appId: "1:620902866005:web:3eabf9d48113730d2d08dc"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        const db = firebase.firestore()
+
+    </script>
+    <script src="./js/app.js"></script>
+</body>
+
+</html>

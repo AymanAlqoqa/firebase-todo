@@ -1,0 +1,119 @@
+:root {
+  --primary-color: #795548;
+  --secondary-color: #818181;
+  --bg-color: #ece5df;
+  --border-color: #d49882;
+  --border-hover-color: #ff5722;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 20px;
+  background-color: var(--primary-color);
+}
+.container {
+  margin: 0 auto;
+}
+
+header {
+  margin: 1rem 0;
+  text-align: center;
+  padding: 1rem;
+  color: var(--primary-color);
+  clip-path: circle(60% at 50% -50%);
+  background-color: var(--bg-color);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+main {
+  display: flex;
+  flex-direction: column;
+}
+form {
+  text-align: center;
+  position: relative;
+  width: 70%;
+  margin: 0 auto;
+  margin-top: 4rem;
+}
+.todo {
+  width: 80%;
+  font-size: 2rem;
+  padding: 0.5rem;
+  color: var(--primary-color);
+  outline: none;
+  border: 0.2rem solid var(--secondary-color);
+  border-radius: 1rem;
+  width: 0;
+  opacity: 0;
+  transition: all ease-in 0.5s;
+  float: right;
+  line-height: 2rem;
+}
+form > button[type='submit'] {
+  position: absolute;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  border: none;
+  top: -0.1rem;
+  right: -1rem;
+  color: var(--primary-color);
+  background-color: var(--bg-color);
+  font-size: 3rem;
+  outline: none;
+  transition: transform ease-in 0.3s;
+  cursor: pointer;
+}
+form > button[type='submit']:hover {
+  transform: rotate(145deg);
+}
+.active {
+  width: 100%;
+  opacity: 1;
+}
+
+/* list style */
+.list {
+  list-style-type: none;
+  width: 70%;
+  margin: 0 auto;
+  margin-top: 2rem;
+
+  min-width: 20rem;
+}
+.list-del {
+  font-weight: bold;
+  font-size: larger;
+}
+.inputText {
+  padding: 0.8rem;
+  outline: none;
+  border: none;
+  color: var(--primary-color);
+  font-size: 1.2rem;
+  width: 80%;
+}
+
+.list li {
+  padding: 1.5rem;
+  border-left: 1rem solid var(--border-color);
+  font-size: 1.2rem;
+  color: var(--primary-color);
+  background-color: var(--bg-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem 0;
+}
+.list-del img:hover {
+  transform: rotate3d(0, 1, 0.1, 3.142rad) scale(1.1);
+}
+.list li:hover {
+  border-color: var(--border-hover-color);
+}
